@@ -14,10 +14,10 @@
                     <asp:Button ID="btn1" runat="server" Text="1" OnClick="btn1_Click" />
                 </div>
                 <div class="col-md-4">
-                    <asp:Button ID="btnMais" runat="server" Text="+" />
+                    <asp:Button ID="btnMais" runat="server" Text="+" OnClick="btnMais_Click" />
                 </div>
                 <div class="col-md-4">
-                    <asp:Button ID="btnIgual" runat="server" Text="=" />
+                    <asp:Button ID="btnIgual" runat="server" Text="=" OnClick="btnIgual_Click" />
                 </div>
             </div>
         </div>
