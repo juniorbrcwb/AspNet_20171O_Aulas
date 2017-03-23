@@ -13,8 +13,8 @@
             <div class="media">
                 <div class="media-left">
                     <a href="DetalhesProduto.aspx?idProduto=<%#: Item.ProdutoID %>">
-                        <img class="media-object" 
-                            src="/Imagens/Produto/<%#: Item.CaminhoImagem %>" 
+                        <img class="miniaturaImagemProduto media-object"
+                            src="/Imagens/Produtos/<%#: Item.CaminhoImagem %>" 
                             alt="...">
                     </a>
                 </div>
