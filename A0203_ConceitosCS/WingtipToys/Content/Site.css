@@ -36,3 +36,10 @@ input[type="select"] {
         padding: 0;
     }
 }
+
+
+.miniaturaImagemProduto
+{
+    height : 128px;
+    width : 128px;
+}
