@@ -26,7 +26,7 @@ namespace WingtipToys.Models
                     {
                         Nome = "Fusca",
                         Descricao = "Carro Clássico",
-                        CaminhoImagem = "carconvert.png",
+                        CaminhoImagem = "fusca.jpg",
                         ValorUnitario = 60,
                         CategoriaID = 1
                     }
@@ -37,7 +37,7 @@ namespace WingtipToys.Models
                     {
                         Nome = "Fusion",
                         Descricao = "Carro sedan",
-                        CaminhoImagem = "carearly.png",
+                        CaminhoImagem = "fusion.jpg",
                         ValorUnitario = 10,
                         CategoriaID = 1
                     }
@@ -48,7 +48,7 @@ namespace WingtipToys.Models
                     {
                         Nome = "Titanic",
                         Descricao = "Barco Clássico",
-                        CaminhoImagem = "boatbig.png",
+                        CaminhoImagem = "titanic.jpg",
                         ValorUnitario = 600,
                         CategoriaID = 2
                     }
