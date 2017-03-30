@@ -12,10 +12,13 @@ namespace WingtipToys
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ddlCategoria.DataValueField = "CategoriaID";
-            ddlCategoria.DataTextField = "Nome";
-            ddlCategoria.DataSource = new ContextoProduto().Categorias.ToList();
-            ddlCategoria.DataBind();
+            if (!IsPostBack)
+            {
+                ddlCategoria.DataValueField = "CategoriaID";
+                ddlCategoria.DataTextField = "Nome";
+                ddlCategoria.DataSource = new ContextoProduto().Categorias.ToList();
+                ddlCategoria.DataBind();
+            }
         }
 
         protected void btnCadastrar_Click(object sender, EventArgs e)
@@ -32,6 +35,7 @@ namespace WingtipToys
 
                 contexto.Produtos.Add(p);
                 contexto.SaveChanges();
+                Response.Redirect("/ListaProdutos.aspx");
             }
         }
     }
