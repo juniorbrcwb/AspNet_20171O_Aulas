@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A0203_ConceitosCS", "A0203_ConceitosCS.csproj", "{A662E769-2952-474D-8249-95E877AC64F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A0203_ConceitosCS", "A0203_ConceitosCS\A0203_ConceitosCS.csproj", "{A662E769-2952-474D-8249-95E877AC64F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForms1", "..\WebForms1\WebForms1.csproj", "{7B25C52D-5F01-4649-B05A-BD3BEB0C9986}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForms1", "WebForms1\WebForms1.csproj", "{7B25C52D-5F01-4649-B05A-BD3BEB0C9986}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys", "WingtipToys\WingtipToys.csproj", "{292C70FA-8175-464A-AE38-74868734F0AF}"
 EndProject
