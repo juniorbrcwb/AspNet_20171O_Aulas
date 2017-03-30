@@ -211,6 +211,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="DetalhesProduto.aspx" />
+    <Content Include="EditarProduto.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -415,6 +416,13 @@
     </Compile>
     <Compile Include="DetalhesProduto.aspx.designer.cs">
       <DependentUpon>DetalhesProduto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditarProduto.aspx.cs">
+      <DependentUpon>EditarProduto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarProduto.aspx.designer.cs">
+      <DependentUpon>EditarProduto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
