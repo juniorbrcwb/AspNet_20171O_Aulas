@@ -6,7 +6,7 @@ using System.Web;
 
 namespace WingtipToys.Models
 {
-    public class ContextoProdutoInitializer : DropCreateDatabaseAlways<ContextoProduto>
+    public class ContextoProdutoInitializer : DropCreateDatabaseIfModelChanges<ContextoProduto>
     {
         protected override void Seed(ContextoProduto context)
         {
