@@ -19,7 +19,6 @@ namespace WingtipToys
                 ddlCategoria.DataSource = new ContextoProduto().Categorias.ToList();
                 ddlCategoria.DataBind();
             }
-            
         }
 
         protected void btnCadastrar_Click(object sender, EventArgs e)
@@ -36,7 +35,7 @@ namespace WingtipToys
 
                 contexto.Produtos.Add(p);
                 contexto.SaveChanges();
-                Response.Redirect("/EditarProduto.aspx");
+                Response.Redirect("/ListaProdutos.aspx");
             }
         }
     }
