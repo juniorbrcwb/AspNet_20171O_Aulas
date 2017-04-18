@@ -30,6 +30,7 @@
                 @Html.ActionLink("Detalhes", "Details", new { id = cat.CategoriaID })
                 @Html.ActionLink("Exibir Produtos", "Index", "Produtos", new { idCat = cat.CategoriaID }, null)
                 @Html.ActionLink("Exibir Produtos", "Index","Produtos", new { idCat = cat.CategoriaID }, new { @class="btn btn-primary"})
+                @Html.ActionLink("Excluir", "Delete", new { id = cat.CategoriaID })
             </td>
         </tr>
     }

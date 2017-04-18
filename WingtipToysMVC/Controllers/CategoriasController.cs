@@ -75,5 +75,32 @@ namespace WingtipToysMVC.Controllers
 
             return View(categoria);
         }
+
+        public ActionResult Delete(int? id)
+        {
+            if(id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Categoria cat = banco.Categorias.Find(id);
+
+            if(cat == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(cat);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult ExclusaoConfirmada(int id)
+        {
+            Categoria cat = banco.Categorias.Find(id);
+            banco.Categorias.Remove(cat);
+            banco.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
