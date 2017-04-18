@@ -11,9 +11,17 @@ namespace WingtipToysMVC.Controllers
         private WingtipToysMVCContext banco = new WingtipToysMVCContext();
 
         // GET: Categorias  (www.meusistema.com/Categorias)
-        public ActionResult Index()
+        public ActionResult Index(string filtroNome)
         {
-            return View(banco.Categorias.ToList());
+            IQueryable<Categoria> categorias = banco.Categorias;
+
+            if (!string.IsNullOrEmpty(filtroNome))
+            {
+                filtroNome = filtroNome.ToLower();
+                categorias = categorias.Where(c => c.Nome.ToLower().Contains(filtroNome));
+            }
+
+            return View(categorias.ToList());
         }
 
         //GET: Categorias/Create
@@ -66,6 +74,33 @@ namespace WingtipToysMVC.Controllers
             }
 
             return View(categoria);
+        }
+
+        public ActionResult Delete(int? id)
+        {
+            if(id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Categoria cat = banco.Categorias.Find(id);
+
+            if(cat == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(cat);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult ExclusaoConfirmada(int id)
+        {
+            Categoria cat = banco.Categorias.Find(id);
+            banco.Categorias.Remove(cat);
+            banco.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
