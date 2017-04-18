@@ -11,10 +11,14 @@ namespace WingtipToysMVC.Controllers
         private WingtipToysMVCContext db = new WingtipToysMVCContext();
 
         // GET: Produtos
-        public ActionResult Index()
+        public ActionResult Index(int? idCat)
         {
-            var produtoes = db.Produtoes.Include(p => p._Categoria);
-            return View(produtoes.ToList());
+            var produtos = db.Produtoes.Include(p => p._Categoria);
+
+            if (idCat.HasValue)
+                produtos = produtos.Where(p => p.CategoriaID == idCat.Value);
+
+            return View(produtos.ToList());
         }
 
         // GET: Produtos/Details/5

@@ -11,9 +11,17 @@ namespace WingtipToysMVC.Controllers
         private WingtipToysMVCContext banco = new WingtipToysMVCContext();
 
         // GET: Categorias  (www.meusistema.com/Categorias)
-        public ActionResult Index()
+        public ActionResult Index(string filtroNome)
         {
-            return View(banco.Categorias.ToList());
+            IQueryable<Categoria> categorias = banco.Categorias;
+
+            if (!string.IsNullOrEmpty(filtroNome))
+            {
+                filtroNome = filtroNome.ToLower();
+                categorias = categorias.Where(c => c.Nome.ToLower().Contains(filtroNome));
+            }
+
+            return View(categorias.ToList());
         }
 
         //GET: Categorias/Create
